@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:10 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 10:28:35 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 11:04:52 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,14 @@ void	Contact::setDarkestSecret(const std::string &darkestSecret){
 	this->darkest_secret = darkestSecret;
 }
 
+Contact::Contact(){}
+
+Contact::Contact(const std::string firstName, const std::string lastName, \
+	const std::string nickName, const std::string phoneNumber, const std::string darkestSecret)
+{
+	setFirstName(firstName);
+	setLastName(lastName);
+	setNickName(nickName);
+	setPhoneNumber(phoneNumber);
+	setDarkestSecret(darkestSecret);
+}
