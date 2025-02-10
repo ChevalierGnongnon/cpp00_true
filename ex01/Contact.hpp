@@ -6,14 +6,15 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:14 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 10:46:57 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 11:58:58 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 # include <string>
-
+# include <cctype>
+# include <iostream>
 class Contact {
 	private :
 		std::string first_name;
