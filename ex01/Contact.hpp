@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:14 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 11:58:58 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:02:31 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ class Contact {
 		void setNickName(const std::string &nickName);
 		void setPhoneNumber(const std::string &phoneNumber);
 		void setDarkestSecret(const std::string &darkestSecret);
-		 
+		
+		
 		Contact();
 		Contact(const std::string firstName, const std::string lastName, \
 				const std::string nickName, const std::string phoneNumber, const std::string darkestSecret);
