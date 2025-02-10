@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 14:10:01 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 15:06:16 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ PhoneBook::PhoneBook(){};
 PhoneBook::~PhoneBook(){
 	std::cout << "PhoneBook has been destroyed.";
 }
-
 
 static void	display_column(const std::string content)
 {
@@ -59,4 +58,14 @@ void PhoneBook::destruct(){
 
 	for (i = 0; i < this->nbContact; i++)
 		this->contactlist[i].~Contact();
+}
+
+void PhoneBook::addcontact(Contact newContact){
+	if (this->nbContact == 8)
+	{
+		this->contactlist[8].~Contact();
+		this->contactlist[8] = newContact;
+	}
+	else
+		this->contactlist[nbContact + 1] = newContact;
 }
