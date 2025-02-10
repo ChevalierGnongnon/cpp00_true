@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 15:18:28 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 15:20:06 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,5 @@ void PhoneBook::searchContact(int index){
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
 	}
 	else
-		std::cout << "Error : wrong index (" << index << "): must be between 0 and 7.";
+		std::cout << "Error : wrong index (" << index << "): must be between 0 and" << this->nbContact << ".";
 }
