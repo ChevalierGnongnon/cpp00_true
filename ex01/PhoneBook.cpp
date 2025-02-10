@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 15:06:16 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 15:18:28 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void PhoneBook::destruct(){
 		this->contactlist[i].~Contact();
 }
 
-void PhoneBook::addcontact(Contact newContact){
+void PhoneBook::addContact(Contact newContact){
 	if (this->nbContact == 8)
 	{
 		this->contactlist[8].~Contact();
@@ -68,4 +68,22 @@ void PhoneBook::addcontact(Contact newContact){
 	}
 	else
 		this->contactlist[nbContact + 1] = newContact;
+}
+
+void PhoneBook::searchContact(int index){
+
+	if (index <= this->nbContact)
+	{
+		std::cout << "|----------|----------|----------|----------|" << std::endl;
+		std::cout << "|" << index << "|";
+		display_column(this->contactlist[index].getFirstName());
+		std::cout << "|";
+		display_column(this->contactlist[index].getLastName());
+		std::cout << "|";
+		display_column(this->contactlist[index].getNickName());
+		std::cout << "|" << std::endl;
+		std::cout << "|----------|----------|----------|----------|" << std::endl;
+	}
+	else
+		std::cout << "Error : wrong index (" << index << "): must be between 0 and 7.";
 }

@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:23 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 15:06:38 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 15:14:53 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ class PhoneBook {
 		int		size;
 	public :
 		PhoneBook();
-		void addcontact(Contact newContact);
-		Contact search_contact(int index);
-		void destruct();
-		void display();
+		void 	addContact(Contact newContact);
+		void	searchContact(int index);
+		void	destruct();
+		void	display();
 		~PhoneBook();
 };
 
