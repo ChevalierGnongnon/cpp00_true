@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 13:33:29 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:50:55 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,40 +19,34 @@ PhoneBook::~PhoneBook(){
 }
 
 
+static void	display_column(const std::string content)
+{
+	int i = 0;
+	
+	if (content.size() < 10)
+		std::cout << content;
+	else
+	{
+		for(i = 0; i < 9; i++)
+			std::cout << content;
+		std::cout << ".";
+	}
+}
+
 void PhoneBook::display()
 {
 	int	i;
 	int	j;
 
-	std::cout << "|----------|----------|----------|----------|";
-	for (i = 0; i < 8; i++){
-		std::cout << i + "|";
-		if (this->contactlist[i].getFirstName().size() < 10)
-			std::cout << this->contactlist[i].getFirstName();
-		else
-		{
-			for(j = 0; j < 9; j++)
-				std::cout << this->contactlist[i].getFirstName()[j];
-			std::cout << ".";
-		}
+	std::cout << "|----------|----------|----------|----------|" ;
+	for (i = 0; i < this->nbContact; i++){
+		std::cout << "|" << i << "|";
+		display_column(this->contactlist[i].getFirstName());
 		std::cout << "|";
-		if (this->contactlist[i].getLastName().size() < 10)
-			std::cout << this->contactlist[i].getLastName();
-		else
-		{
-			for(j = 0; j < 9; j++)
-				std::cout << this->contactlist[i].getLastName()[j];
-			std::cout << ".";
-		}
+		display_column(this->contactlist[i].getLastName());
 		std::cout << "|";
-		if (this->contactlist[i].getNickName().size() < 10)
-			std::cout << this->contactlist[i].getNickName();
-		else
-		{
-			for(j = 0; j < 9; j++)
-				std::cout << this->contactlist[i].getNickName()[j];
-			std::cout << ".";
-		}
+		display_column(this->contactlist[i].getNickName());
+		std::cout << "|" << std::endl;
 	}
 	std::cout << "|----------|----------|----------|----------|";
 	
