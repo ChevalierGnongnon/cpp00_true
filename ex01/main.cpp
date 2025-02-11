@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 12:38:29 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 14:02:28 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ int main(void)
 		else if (input == "SEARCH")
 		{
 			Book.display();
+			if (Book.get_nbContacts() == 0)
+				std::cout << "Error: no contact are registered.";
+				
 		}
 		else
 			std::cout << "Bad entry, please retry" << std::endl;
