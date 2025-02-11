@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:10 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 11:31:50 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:42:50 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,5 @@ Contact::Contact(const std::string firstName, const std::string lastName, \
 }
 
 Contact::~Contact(){
-	std::cout << "Contact constructor has been deleted" << std::endl;
+	std::cout << "Contact has been deleted." << std::endl;
 } 

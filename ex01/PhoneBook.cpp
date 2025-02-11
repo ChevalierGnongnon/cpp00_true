@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 11:31:04 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:42:00 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 PhoneBook::PhoneBook(){};
 
 PhoneBook::~PhoneBook(){
-	std::cout << "PhoneBook has been destroyed.";
+	std::cout << "PhoneBook has been destroyed." << std::endl;
 }
 
 static void	display_column(const std::string content)
@@ -38,10 +38,9 @@ static void	display_column(const std::string content)
 
 void PhoneBook::display(){
 	int	i;
-	int	j;
 
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
-	for (i = 0; i < this->nbContact; i++){
+	for (i = 0; i < this->nbContacts; i++){
 		std::cout << "|" << i << "|";
 		display_column(this->contactlist[i].getFirstName());
 		std::cout << "|";
@@ -56,22 +55,22 @@ void PhoneBook::display(){
 void PhoneBook::destruct(){
 	int i = 0;
 
-	for (i = 0; i < this->nbContact; i++)
+	for (i = 0; i < this->nbContacts; i++)
 		this->contactlist[i].~Contact();
 }
 
 void PhoneBook::addContact(Contact newContact){
-	if (this->nbContact == 8)
+	if (this->nbContacts == 8)
 	{
 		this->contactlist[8].~Contact(); // le + vieux pas le dernier
 		this->contactlist[8] = newContact;
 	}
 	else
-		this->contactlist[nbContact + 1] = newContact;
+		this->contactlist[nbContacts + 1] = newContact;
 }
 
 void PhoneBook::searchContact(int index){
-	if (index <= this->nbContact)
+	if (index <= this->nbContacts)
 	{
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
 		std::cout << "|" << index << "|";
@@ -84,5 +83,5 @@ void PhoneBook::searchContact(int index){
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
 	}
 	else
-		std::cout << "Error : wrong index (" << index << "): must be between 0 and" << this->nbContact << ".";
+		std::cout << "Error : wrong index (" << index << "): must be between 0 and" << this->nbContacts << ".";
 }

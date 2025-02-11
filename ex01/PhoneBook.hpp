@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:23 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 15:14:53 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:39:28 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ class PhoneBook {
 
 	private :
 		Contact contactlist[8];
-		int 	nbContact;
+		int		oldestContact;
+		int 	nbContacts;
 		int		size;
 	public :
 		PhoneBook();
