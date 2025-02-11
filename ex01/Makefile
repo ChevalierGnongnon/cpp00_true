@@ -6,14 +6,15 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 14:57:23 by chhoflac          #+#    #+#              #
-#    Updated: 2025/02/03 14:58:03 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/02/11 10:22:42 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = PhoneBook
 
 SOURCES = Contact.cpp \
-	PhoneBook.cpp
+	PhoneBook.cpp \
+	main.cpp 
 
 OBJS = $(SOURCES:.cpp=.o)
 

@@ -6,11 +6,11 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 14:08:51 by chhoflac          #+#    #+#              #
-#    Updated: 2025/02/03 14:08:52 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/02/11 10:23:35 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = Megaphone
 
 SOURCES = megaphone.cpp
 

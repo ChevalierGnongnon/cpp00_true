@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 12:07:22 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 10:21:43 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 
 int main(void)
 {
-	PhoneBook book;
-
+	std::cout << "Welcome to phonebook !";
 }

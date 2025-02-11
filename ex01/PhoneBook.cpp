@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/10 15:20:06 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:53:42 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ void PhoneBook::addContact(Contact newContact){
 }
 
 void PhoneBook::searchContact(int index){
-
 	if (index <= this->nbContact)
 	{
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
