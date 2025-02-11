@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 10:38:17 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 12:38:29 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 
 int main(void)
 {
-	PhoneBook Book;
+	PhoneBook Book = PhoneBook();
+	
 	std::string input;
-	std::cout << "Welcome to phonebook !" << std::endl;
+	std::cout << "Welcome to phonebook !" << std::endl << "Please enter a command" << std::endl;
 
 	std::cin >> input;
 	while (input != "EXIT")
@@ -28,7 +29,9 @@ int main(void)
 		if (input == "ADD")
 			std::cout << "add has been selected" << std::endl;
 		else if (input == "SEARCH")
-			std::cout << "search has been selected" << std::endl;
+		{
+			Book.display();
+		}
 		else
 			std::cout << "Bad entry, please retry" << std::endl;
 		std::cin >> input;

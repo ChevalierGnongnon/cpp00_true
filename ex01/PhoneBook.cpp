@@ -6,13 +6,15 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 11:42:00 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 12:35:55 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(){};
+PhoneBook::PhoneBook(){
+	this->nbContacts = 0;
+};
 
 PhoneBook::~PhoneBook(){
 	std::cout << "PhoneBook has been destroyed." << std::endl;
@@ -40,15 +42,29 @@ void PhoneBook::display(){
 	int	i;
 
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
-	for (i = 0; i < this->nbContacts; i++){
-		std::cout << "|" << i << "|";
-		display_column(this->contactlist[i].getFirstName());
+	if (this->nbContacts == 0)
+	{
+		std::cout << "|         " << 0 << "|";
+		display_column("none");
 		std::cout << "|";
-		display_column(this->contactlist[i].getLastName());
+		display_column("none");
 		std::cout << "|";
-		display_column(this->contactlist[i].getNickName());
+		display_column("none");
 		std::cout << "|" << std::endl;
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
+	}
+	else
+	{
+		for (i = 0; i < this->nbContacts; i++){
+			std::cout << "|         " << i << "|";
+			display_column(this->contactlist[i].getFirstName());
+			std::cout << "|";
+			display_column(this->contactlist[i].getLastName());
+			std::cout << "|";
+			display_column(this->contactlist[i].getNickName());
+			std::cout << "|" << std::endl;
+			std::cout << "|----------|----------|----------|----------|" << std::endl;
+		}
 	}
 }
 

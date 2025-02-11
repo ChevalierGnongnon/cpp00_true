@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:10 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 11:42:50 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:45:18 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,6 @@ void	Contact::setDarkestSecret(const std::string &darkestSecret){
 }
 
 Contact::Contact(){}
-
-Contact::Contact(const std::string firstName, const std::string lastName, \
-	const std::string nickName, const std::string phoneNumber, const std::string darkestSecret){
-	setFirstName(firstName);
-	setLastName(lastName);
-	setNickName(nickName);
-	setPhoneNumber(phoneNumber);
-	setDarkestSecret(darkestSecret);
-}
 
 Contact::~Contact(){
 	std::cout << "Contact has been deleted." << std::endl;
