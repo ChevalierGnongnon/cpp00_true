@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 09:53:42 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:31:04 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void PhoneBook::destruct(){
 void PhoneBook::addContact(Contact newContact){
 	if (this->nbContact == 8)
 	{
-		this->contactlist[8].~Contact();
+		this->contactlist[8].~Contact(); // le + vieux pas le dernier
 		this->contactlist[8] = newContact;
 	}
 	else
