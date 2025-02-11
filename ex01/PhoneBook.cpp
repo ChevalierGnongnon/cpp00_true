@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 12:35:55 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/11 13:54:09 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	display_column(const std::string content)
 	else
 	{
 		for(i = 0; i < 9; i++)
-			std::cout << content;
+			std::cout << content[i];
 		std::cout << ".";
 	}
 }
@@ -41,6 +41,11 @@ static void	display_column(const std::string content)
 void PhoneBook::display(){
 	int	i;
 
+	std::cout << "|----------|----------|----------|----------|" << std::endl;
+	std::cout << "|   Index  |";
+	std::cout << "First Name|";
+	std::cout << "Last  Name|";
+	std::cout << "Nick  Name|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
 	if (this->nbContacts == 0)
 	{
