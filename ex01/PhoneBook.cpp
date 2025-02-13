@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/13 14:54:20 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:09:08 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void PhoneBook::addContact(Contact newContact){
 	else
 	{
 		this->contactlist[nbContacts] = newContact;
-		this->nbContacts++;
+		this->set_nbContact(1);
 	}
 	
 }

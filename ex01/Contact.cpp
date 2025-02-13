@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:10 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 11:45:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:51:07 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ std::string	Contact::getFirstName(){
 }
 
 std::string	Contact::getLastName(){
-	return (this->first_name);
+	return (this->last_name);
 }
 
 std::string	Contact::getNickName(){
-	return (this->first_name);
+	return (this->nick_name);
 }
 
 std::string	Contact::getPhoneNumber(){
-	return (this->first_name);
+	return (this->phone_number);
 }
 
 std::string	Contact::getDarkestSecret(){
-	return (this->first_name);
+	return (this->darkest_secret);
 }
 
 void	Contact::setFirstName(const std::string &firstName){

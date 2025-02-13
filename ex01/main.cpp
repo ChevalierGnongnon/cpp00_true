@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/13 14:50:07 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:43:23 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,27 @@ void create_contact(PhoneBook Book, int index){
 	
 	std::cout << "Please enter contact first name :" << std::endl;
 	std::cin >> input;
-	if (input.size() >= 1)
-	{
+	std::cout << input;
+	if (input.size() >= 1){
 		newContact.setFirstName(input);
 		std::cout << "Please enter contact last name :" << std::endl;
 		std::cin >> input;
+		std::cout << input;
 		if (input.size() >= 1){
 			newContact.setLastName(input);
 			std::cout << "Please enter contact nick name :" << std::endl;
 			std::cin >> input;
+			std::cout << input;
 			if (input.size() >= 1){
 				newContact.setNickName(input);
 				std::cout << "Please enter contact phone number :" << std::endl;
 				std::cin >> input;
+				std::cout << input;
 				if (input.size() >= 1){
 					newContact.setPhoneNumber(input);
 					std::cout << "Please enter contact darkest secret :"  << std::endl;
 					std::cin >> input;
+					std::cout << input;
 					if (input.size() >= 1){
 						newContact.setDarkestSecret(input);
 						std::cout << "Contact successfully registered." << std::endl;
@@ -44,6 +48,10 @@ void create_contact(PhoneBook Book, int index){
 					}
 				}
 			}
+		}
+		else {
+			std::cout<<"Error: bad entry";
+			newContact.~Contact();
 		}
 	}
 }
@@ -58,7 +66,7 @@ int main(void)
 	std::cin >> command;
 	while (command != "EXIT")
 	{
-		std::cout << "Please enter a command" << std::endl;
+		
 		if (command == "ADD")
 		{
 			create_contact(Book, Book.get_nbContacts());
