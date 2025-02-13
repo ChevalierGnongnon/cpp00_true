@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/13 13:17:09 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:54:20 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 PhoneBook::PhoneBook(){
 	this->nbContacts = 0;
+	this->oldestContact = 0;
 };
 
 PhoneBook::~PhoneBook(){
@@ -104,13 +105,18 @@ void PhoneBook::addContact(Contact newContact){
 	int index = this->get_oldestContact(); 
 
 	std::cout << index;
+	
 	if (this->nbContacts == 8)
 	{
 		this->contactlist[index].~Contact();
 		this->contactlist[index] = newContact;
 	}
 	else
-		this->contactlist[nbContacts + 1] = newContact;
+	{
+		this->contactlist[nbContacts] = newContact;
+		this->nbContacts++;
+	}
+	
 }
 
 void PhoneBook::searchContact(int index){
