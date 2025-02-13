@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 15:21:46 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:01:43 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int main(void)
 	
 	std::cout << "Welcome to phonebook !" << std::endl << "Please enter a command" << std::endl;
 	std::cin >> command;
-	while (input != "EXIT")
+	while (command != "EXIT")
 	{
 		std::cout << "Please enter a command" << std::endl;
 		if (command == "ADD")

@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:23 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 15:22:31 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:16:57 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PhoneBook {
 		//Getters
 		int get_nbContacts();
 		int get_oldestContact();
-		Contact get_contactList();
+		Contact *get_contactList();
 
 		//Setters
 		void	set_oldestContact(int index);

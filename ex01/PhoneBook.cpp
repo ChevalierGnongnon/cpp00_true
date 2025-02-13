@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/11 15:38:39 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:17:09 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int PhoneBook::get_oldestContact(){
 	return (this->oldestContact);
 }
 
-Contact PhoneBook::get_contactList(){
-	return (this->contactlist)
+Contact* PhoneBook::get_contactList(){
+	return (this->contactlist);
 }
 
 static void	display_column(const std::string content){
@@ -103,6 +103,7 @@ void PhoneBook::addContact(Contact newContact){
 
 	int index = this->get_oldestContact(); 
 
+	std::cout << index;
 	if (this->nbContacts == 8)
 	{
 		this->contactlist[index].~Contact();
