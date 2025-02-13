@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:23 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/13 15:09:36 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:09:30 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 # include "Contact.hpp"
 # include <string>
+# include <cctype>
  
 class PhoneBook {
 
@@ -29,7 +30,7 @@ class PhoneBook {
 
 		//Setters
 		void	set_oldestContact(int index);
-		void	set_nbContact(int value);
+		void	set_nbContact();
 		
 		//Constructeur(s) / Destructeur(s)
 		PhoneBook();
