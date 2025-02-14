@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/14 18:04:59 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/14 18:11:02 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int CheckInputIsNum(std::string input)
 void create_contact(PhoneBook *Book, int index){
 	Contact *newContact = new Contact();
 	std::string input;
+	
 	
 	std::cout << "Please enter contact first name :" << std::endl;
 	std::getline(std::cin, input);
@@ -55,11 +56,10 @@ void create_contact(PhoneBook *Book, int index){
 				}
 			}
 		}
-		// else {
-			
-		// 	std::cout << "Error: bad entry";
-		// 	newContact.~Contact();
-		// }
+		if (){
+			std::cout << "Error: bad entry";
+			delete newContact;
+		}
 	}
 }
 
