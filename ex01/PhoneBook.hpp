@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:23 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/14 11:19:38 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/14 15:49:53 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include "Contact.hpp"
 # include <string>
 # include <cctype>
+# include <cstdlib>
  
 class PhoneBook {
 

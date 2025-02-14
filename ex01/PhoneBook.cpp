@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/14 13:58:32 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:18:18 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,18 +123,15 @@ void PhoneBook::addContact(Contact *newContact){
 }
 
 void PhoneBook::searchContact(int index){
-	if (index <= this->nbContacts)
+	if (index == 0 || index <= this->nbContacts - 1)
 	{
-		std::cout << "|----------|----------|----------|----------|" << std::endl;
-		std::cout << "|" << index << "|";
-		display_column(this->contactlist[index]->getFirstName());
-		std::cout << "|";
-		display_column(this->contactlist[index]->getLastName());
-		std::cout << "|";
-		display_column(this->contactlist[index]->getNickName());
-		std::cout << "|" << std::endl;
-		std::cout << "|----------|----------|----------|----------|" << std::endl;
+		std::cout << "Index : " << index << std::endl;
+		std::cout << "First name : " << this->contactlist[index]->getFirstName() << std::endl;
+		std::cout << "Last name : " << this->contactlist[index]->getLastName() << std::endl;
+		std::cout << "Nick name : " << this->contactlist[index]->getNickName() << std::endl;
+		std::cout << "Phone number : " << this->contactlist[index]->getPhoneNumber() << std::endl;
+		std::cout << "Darkest secret : " << this->contactlist[index]->getDarkestSecret() << std::endl;
 	}
 	else
-		std::cout << "Error : wrong index (" << index << "): must be between 0 and" << this->nbContacts << ".";
+		std::cout << "Error : wrong index (" << index << "): must be between 0 and " << this->nbContacts - 1 << " ." << std::endl;
 }

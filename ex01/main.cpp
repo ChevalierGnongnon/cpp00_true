@@ -6,20 +6,20 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/14 11:23:53 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:03:11 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-static int PhoneNumberCheck(std::string PhoneNumber)
+static int CheckInputIsNum(std::string input)
 {
 	int i;
 
-	for (i = 0; i < PhoneNumber.size(); i++)
+	for (i = 0; i < input.size(); i++)
 	{
-		if (!std::isdigit(PhoneNumber[i]))
+		if (!std::isdigit(input[i]))
 			return (0);
 	}
 	return (1);
@@ -43,7 +43,7 @@ void create_contact(PhoneBook *Book, int index){
 				newContact->setNickName(input);
 				std::cout << "Please enter contact phone number :" << std::endl;
 				std::cin >> input;
-				if (input.size() >= 1 && PhoneNumberCheck(input)){
+				if (input.size() >= 1 && CheckInputIsNum(input)){
 					newContact->setPhoneNumber(input);
 					std::cout << "Please enter contact darkest secret :"  << std::endl;
 					std::cin >> input;
@@ -69,6 +69,8 @@ int main(void)
 	PhoneBook Book = PhoneBook();
 	
 	std::string command;
+	std::string test;
+	int 		index;
 	
 	std::cout << "Welcome to phonebook !" << std::endl << "Please enter a command:" << std::endl;
 	std::cin >> command;
@@ -81,6 +83,15 @@ int main(void)
 			Book.display();
 			if (Book.get_nbContacts() == 0)
 				std::cout << "Error: no contact are registered." << std::endl;
+			else {
+				std::cout << "please enter an index :" << std::endl;
+				std::cin >> test;
+				if (!CheckInputIsNum(test))
+					std::cout << "Error: wrong input. Please enter a number." << std::endl;
+				else {
+					Book.searchContact(std::stoi(test));
+				}
+			}
 		}
 		else
 			std::cout << "Bad entry, please retry" << std::endl;
