@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:23 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/13 17:09:30 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/14 11:19:38 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 class PhoneBook {
 
 	private :
-		Contact contactlist[8];
+		Contact *contactlist[8];
 		int		oldestContact;
 		int 	nbContacts;
 	public :
 		//Getters
 		int get_nbContacts();
 		int get_oldestContact();
-		Contact *get_contactList();
+		Contact **get_contactList();
 
 		//Setters
 		void	set_oldestContact(int index);
@@ -37,7 +37,7 @@ class PhoneBook {
 		~PhoneBook();
 		
 		//Methodes
-		void 	addContact(Contact newContact);
+		void 	addContact(Contact *newContact);
 		void	searchContact(int index);
 		void	destruct();
 		void	display();

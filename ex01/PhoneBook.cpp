@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/13 16:46:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/14 11:19:47 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int PhoneBook::get_oldestContact(){
 	return (this->oldestContact);
 }
 
-Contact* PhoneBook::get_contactList(){
+Contact** PhoneBook::get_contactList(){
 	return (this->contactlist);
 }
 
@@ -82,11 +82,11 @@ void PhoneBook::display(){
 	{
 		for (i = 0; i < this->nbContacts; i++){
 			std::cout << "|         " << i << "|";
-			display_column(this->contactlist[i].getFirstName());
+			display_column(this->contactlist[i]->getFirstName());
 			std::cout << "|";
-			display_column(this->contactlist[i].getLastName());
+			display_column(this->contactlist[i]->getLastName());
 			std::cout << "|";
-			display_column(this->contactlist[i].getNickName());
+			display_column(this->contactlist[i]->getNickName());
 			std::cout << "|" << std::endl;
 			std::cout << "|----------|----------|----------|----------|" << std::endl;
 		}
@@ -97,10 +97,10 @@ void PhoneBook::destruct(){
 	int i = 0;
 
 	for (i = 0; i < this->nbContacts; i++)
-		this->contactlist[i].~Contact();
+		delete this->contactlist[i];
 }
 
-void PhoneBook::addContact(Contact newContact){
+void PhoneBook::addContact(Contact *newContact){
 
 	int index = this->get_oldestContact(); 
 
@@ -108,7 +108,7 @@ void PhoneBook::addContact(Contact newContact){
 	
 	if (this->nbContacts == 8)
 	{
-		this->contactlist[index].~Contact();
+		delete this->contactlist[index];
 		this->contactlist[index] = newContact;
 	}
 	else
@@ -124,11 +124,11 @@ void PhoneBook::searchContact(int index){
 	{
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
 		std::cout << "|" << index << "|";
-		display_column(this->contactlist[index].getFirstName());
+		display_column(this->contactlist[index]->getFirstName());
 		std::cout << "|";
-		display_column(this->contactlist[index].getLastName());
+		display_column(this->contactlist[index]->getLastName());
 		std::cout << "|";
-		display_column(this->contactlist[index].getNickName());
+		display_column(this->contactlist[index]->getNickName());
 		std::cout << "|" << std::endl;
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
 	}
