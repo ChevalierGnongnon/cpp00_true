@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/16 14:21:09 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/16 14:40:10 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int main(void)
 	std::getline(std::cin, command);
 	while (command != "EXIT" && 1)
 	{
+
 		if (command.size() == 0 && command != "SEARCH" && command != "ADD")
 			std::cout << "Error: line is empty or invalid" << std::endl;
 		else if (command == "ADD")
@@ -116,5 +117,11 @@ int main(void)
 			std::cout << "bad entry" << std::endl;
 		std::cout << "Please enter a command:"<< std::endl;
 		std::getline(std::cin, command);
+		if (std::cin.eof())
+		{
+			Book.destruct();
+			return (0);
+		}
 	}
+	Book.destruct();
 }

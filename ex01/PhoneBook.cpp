@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/14 16:18:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/16 14:42:49 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,5 +133,5 @@ void PhoneBook::searchContact(int index){
 		std::cout << "Darkest secret : " << this->contactlist[index]->getDarkestSecret() << std::endl;
 	}
 	else
-		std::cout << "Error : wrong index (" << index << "): must be between 0 and " << this->nbContacts - 1 << " ." << std::endl;
+		std::cout << "Error : wrong index (" << index << ")." << std::endl;
 }
