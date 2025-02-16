@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/16 14:40:10 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/16 17:22:32 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,15 @@ int main(void)
 				if (!CheckInputIsNum(test))
 					std::cout << "Error: wrong input. Please enter a number." << std::endl;
 				else {
-					Book.searchContact(std::stoi(test));
+					try {
+						Book.searchContact(std::stoi(test));
+					}
+					catch (const std::invalid_argument&){
+						std::cout << "Error : invalid argument." << std::endl;;
+					}
+					catch (const std::out_of_range&){
+						std::cout << "Error : number out of range." << std::endl;
+					}
 				}
 			}
 		}

@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:18:19 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/16 14:42:49 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/16 17:49:06 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Contact** PhoneBook::get_contactList(){
 static void	display_column(const std::string content){
 	int i = 0;
 	
-	if (content.size() < 10)
+	if (content.size() <= 10)
 	{
 		for (i = 0; i < 10 - content.size(); i++)
 			std::cout << " ";
