@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:11:20 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/14 18:11:02 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/16 14:21:09 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,33 @@ void create_contact(PhoneBook *Book, int index){
 						std::cout << "Contact successfully registered." << std::endl;
 						Book->addContact(newContact);
 					}
+					else {
+						std::cout << "Error: bad entry" << std::endl;
+						delete newContact;
+					}
+				}
+				else {
+					std::cout << "Error: bad entry" << std::endl;
+					delete newContact;
 				}
 			}
+			else {
+				std::cout << "Error: bad entry" << std::endl;
+				delete newContact;
+			}
 		}
-		if (){
-			std::cout << "Error: bad entry";
+		else {
+			std::cout << "Error: bad entry" << std::endl;
 			delete newContact;
 		}
 	}
+	else {
+		std::cout << "Error: bad entry" << std::endl;
+		delete newContact;
+	}
 }
+
+
 
 int main(void)
 {
