@@ -6,7 +6,7 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 14:08:51 by chhoflac          #+#    #+#              #
-#    Updated: 2025/02/11 10:23:35 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/02/16 18:10:43 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ FLAGS = -Werror -Wextra -Wall
 all: $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME) --std=c++98
 
 clean:
 	$(RM) $(OBJS)
